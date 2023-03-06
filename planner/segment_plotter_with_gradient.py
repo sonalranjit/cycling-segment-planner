@@ -6,7 +6,7 @@ plt.rcParams['figure.figsize'] = (16,6)
 plt.rcParams['axes.spines.top'] = False
 plt.rcParams['axes.spines.right'] = False
 
-route_df = pd.read_csv('./data/rochester-to-eastern-divide-elevation-difference.csv')
+route_df = pd.read_csv('./data/rochester-to-fairfax-elevation-difference.csv')
 print(route_df)
 
 gradients = [np.nan]
@@ -34,4 +34,4 @@ plt.ylabel('Gradient (%)', size=14)
 plt.plot(np.arange(len(gradients)), gradients, lw=2, color='#101010')
 plt.show()
 
-route_df.to_csv('./data/rochester-to-eastern-divide-gradient.csv', index=False)
+route_df.to_csv('./data/rochester-to-fairfax-gradient.csv', index=False)

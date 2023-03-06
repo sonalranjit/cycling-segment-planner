@@ -15,7 +15,7 @@ def haversine_distance(lat1, lon1, lat2, lon2) -> float:
     return np.round(distance, 2)
 
 
-route_df = pd.read_csv("./data/rochester-to-eastern-divide.csv")
+route_df = pd.read_csv("./data/rochester-to-fairfax.csv")
 print(route_df)
 
 route_df["elevation_diff"] = route_df["elevation"].diff()
@@ -48,7 +48,7 @@ print(route_df.head())
 
 route_df = route_df.fillna(0)
 print(route_df.head())
-route_df.to_csv("./data/rochester-to-eastern-divide-elevation-difference.csv")
+route_df.to_csv("./data/rochester-to-fairfax-elevation-difference.csv")
 
 plt.plot(route_df["cum_distance"], route_df["cum_elevation"], color="#101010", lw=3)
 plt.title("Route elevation profile", size=20)

@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.offline as pyo
 
-route_df = pd.read_csv('./data/rochester-to-eastern-divide-gradient.csv')
+route_df = pd.read_csv('./data/rochester-to-fairfax-gradient.csv')
 print(route_df.head())
 print(route_df['gradient'].describe())
 
